@@ -1,2 +1,3 @@
 # Python-Fundamentals
-A structured daily learning repository covering Python basics, examples, practice programs, and real-world problem solving.
+A structured repository covering Python basics, hands-on practice programs,
+and concept-wise explanations aligned with real-world usage.
