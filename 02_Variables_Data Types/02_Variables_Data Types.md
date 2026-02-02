@@ -1,3 +1,5 @@
+## 02 : Variables and Data Types 
+
 ### Variables
 
 Variables are containers that store information that can be manipulated and referenced later by the programmer within the code.
@@ -7,9 +9,9 @@ In Python, the programmer does not need to declare the variable type explicitly;
 
 Example:
 ```shell
-name = "Sparsh"     # type str
-age = 23            # type int
-passed = True       # type bool
+name = "Sparsh"       # type str
+age = 23              # type int
+passed = True         # type bool
 ```
 
 It is always advisable to keep variable names descriptive and to follow a set of conventions while creating variables:
@@ -32,4 +34,72 @@ $color = "orange"   # invalid variable name
 
 2name = "Bob"       # invalid variable names as it starts with a number  
 class = 10          # invalid variable names as 'class' is a keyword 
-```    
+```
+### Data Types
+
+Data type specifies the type of value a variable requires to do various operations without causing an error. By default, Python provides the following built-in data types:
+
+- Numeric data: int, float, complex
+   - int: 3, -8, 0
+   - float: 7.349, -9.0, 0.0000001
+   - complex: 6 + 2j
+
+- Text data: str
+   - str: "Hello World!!!", "Python Programming"
+
+- Boolean data:
+   - Boolean data consists of values True or False.
+
+- Sequenced data: list, tuple, range
+   - list: A list is an ordered collection of data with elements separated by a comma and enclosed within square brackets. Lists are mutable and can be modified after creation..
+   - tuple: A tuple is an ordered collection of data with elements separated by a comma and enclosed within parentheses.
+   - range: Returns a sequence of numbers as specified by the user. If not specified by the user, it starts from 0 by default and increments by 1.
+
+- Mapped data: dict
+   - dict: A dictionary is an unordered collection of data containing a key:value pair. The key-value pairs are enclosed within curly brackets.
+
+- Binary data: 
+   - bytes : It is used to convert objects into byte objects
+   - bytearray : It is used to convert objects into bytearray objects
+   - memoryview : It returns a memory view object from a specified object
+
+- Set data: Set is an unordered collection of elements in which no element is repeated.
+
+- None: None is used to define a null value
+
+```shell
+x = 10  
+print(type(x))          # <class 'int'>  
+ 
+PI = 3.14  
+print(type(PI))         # <class 'float'>  
+
+name = "Sparsh"  
+print(type(name))       # <class 'str'>  
+
+isStudent = True  
+print(type(isAdult))    # <class 'bool'>  
+
+empty_var = None  
+print(type(empty_var))  # <class 'NoneType'> 
+```
+
+### Type Conversion & Type Casting 
+Type conversion is when we convert(cast) variables from one type to another. It can 
+happen in 2 ways: 
+
+- Type conversion - Implicit, done automatically by Python 
+```shell
+a = 5  
+b = 3.0  
+print(a + b)      # Python converts ans in float by default
+```
+
+
+
+- Type Casting - Explicitly, done by the programmer 
+```shell
+x = 10           # int
+y = float(x)     # convert to float  
+z = str(x)       # convert to string 
+```
