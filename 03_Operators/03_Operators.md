@@ -1,11 +1,9 @@
-## Operators in Python
+## 03 : Operators in Python
 
-Python provides different types of operators to perform various operations.  
-These operators are categorized based on the type of operation they perform.
+- Python provides different types of operators to perform various operations.  
+- These operators are categorized based on the type of operation they perform.
 
----
-
-## 1. Arithmetic Operators
+### 1. Arithmetic Operators
 
 Arithmetic operators are used to perform mathematical calculations.
 
@@ -19,9 +17,7 @@ Arithmetic operators are used to perform mathematical calculations.
 | Modulus         | `%`      | `a % b` |
 | Floor Division  | `//`     | `a // b` |
 
----
-
-## 2. Assignment Operators
+### 2. Assignment Operators
 
 Assignment operators are used to assign values to variables.
 
@@ -40,9 +36,7 @@ Assignment operators are used to assign values to variables.
 | Right Shift Assign      | `a >>= b` → `a = a >> b` |
 | Left Shift Assign       | `a <<= b` → `a = a << b` |
 
----
-
-## 3. Bitwise Operators
+### 3. Bitwise Operators
 
 Bitwise operators are used to perform operations on binary numbers.
 
@@ -55,9 +49,7 @@ Bitwise operators are used to perform operations on binary numbers.
 | Bitwise Right Shift    | `>>`     | `a >> b` |
 | Bitwise Left Shift     | `<<`     | `a << b` |
 
----
-
-## 4. Comparison Operators
+### 4. Comparison Operators
 
 Comparison operators are used to compare two values and return a boolean result.
 
@@ -70,9 +62,7 @@ Comparison operators are used to compare two values and return a boolean result.
 | Less Than or Equal To    | `<=`     | `a <= b` |
 | Greater Than or Equal To | `>=`     | `a >= b` |
 
----
-
-## 5. Identity Operators
+### 5. Identity Operators
 
 Identity operators are used to compare the memory locations of two objects.
 
@@ -81,9 +71,7 @@ Identity operators are used to compare the memory locations of two objects.
 | is        | `a is b`     | Returns `True` if both refer to the same object |
 | is not    | `a is not b` | Returns `True` if both refer to different objects |
 
----
-
-## 6. Logical Operators
+### 6. Logical Operators
 
 Logical operators are used to combine conditional statements.
 
@@ -93,9 +81,7 @@ Logical operators are used to combine conditional statements.
 | OR  | `or`  | `a == 2 or b == 3` |
 | NOT | `not` | `not (a == 2 or b == 3)` |
 
----
-
-## 7. Membership Operators
+### 7. Membership Operators
 
 Membership operators are used to test whether a value exists in a sequence or collection.
 
@@ -104,26 +90,34 @@ Membership operators are used to test whether a value exists in a sequence or co
 | in       | `a in b`    | Returns `True` if `a` is present in `b` |
 | not in   | `a not in b`| Returns `True` if `a` is not present in `b` |
 
----
+### 8. Operator Precedence in Python
 
-## 8. Operator Precedence in Python
+Operator precedence determines the order in which Python evaluates expressions.  
+Operators with higher precedence are evaluated before operators with lower precedence.
 
-Operator precedence determines the order in which operations are evaluated.
+#### Operator Precedence Table (Highest to Lowest)
 
-| Precedence Level | Operator |
-|------------------|----------|
-| Highest          | `()` |
-|                  | `**` |
-|                  | `~`, `+`, `-` (Unary) |
-|                  | `*`, `/`, `%`, `//` |
-|                  | `+`, `-` |
-|                  | `<<`, `>>` |
-|                  | `&` |
-|                  | `^`, `|` |
-|                  | `<`, `>`, `<=`, `>=` |
-|                  | `==`, `!=` |
-|                  | `=`, `+=`, `-=`, `*=`, `/=`, `//=`, `%=` , `**=` |
-|                  | `is`, `is not` |
-| Lowest           | `in`, `not in`, `and`, `or`, `not` |
+| Precedence Order | Name                                   | Operators |
+|------------------|----------------------------------------|-----------|
+| 1                | Parenthesis                            | `()` |
+| 2                | Exponential                           | `**` |
+| 3                | Complement, Unary Plus, Unary Minus   | `~`, `+`, `-` |
+| 4                | Multiply, Divide, Modulus, Floor Divide | `*`, `/`, `%`, `//` |
+| 5                | Addition, Subtraction                 | `+`, `-` |
+| 6                | Left Shift, Right Shift               | `<<`, `>>` |
+| 7                | Bitwise AND                           | `&` |
+| 8                | Bitwise XOR, Bitwise OR               | `^`, `|` |
+| 9                | Comparison Operators                  | `<`, `>`, `<=`, `>=` |
+| 10               | Equality Operators                    | `==`, `!=` |
+| 11               | Assignment Operators                  | `=`, `+=`, `-=`, `*=`, `/=`, `//=`, `%=` , `**=` |
+| 12               | Identity Operators                    | `is`, `is not` |
+| 13               | Membership Operators                  | `in`, `not in` |
+| 14               | Logical Operators                     | `and`, `or`, `not` |
+
+### Notes :
+
+- Operators with **higher precedence** are evaluated **first**.
+- Parentheses `()` can be used to **override precedence**.
+- Operators at the same precedence level are generally evaluated **from left to right** (except `**`, which is right-associative).
 
 ---
