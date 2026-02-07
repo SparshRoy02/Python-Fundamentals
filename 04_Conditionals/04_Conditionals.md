@@ -1,23 +1,17 @@
 ## 04 : Conditionals in Python
 
 ### Introduction to Conditionals
-
 - Conditional statements allow a Python program to make decisions and execute different blocks of code based on whether a condition evaluates to `True` or `False`.
 - Conditional statements allow you to execute code based on certain conditions.
 - Python uses if, elif, and else for decision-making.
 
-They are essential for:
-
+They are essential for: 
 - Decision-making
 - Input validation
 - Flow control
 - Real-world logic such as authentication, grading, and payments
 
-
-
-
-### if Statement
-
+### If Statement
 The if statement executes a block of code only when the condition is true.
 
 Syntax
@@ -34,8 +28,8 @@ if age >= 18:
     print("Eligible to vote")
 ```
 
-### if–else Statement
 
+### If–Else Statement
 The else block executes when the if condition is false.
 
 ```python
@@ -48,9 +42,9 @@ else:
 ```
 
 
-### elif Statement
+### Elif Statement
 
-elif statement in Python stands for "else if." It allows us to check multiple conditions, providing a way to execute different blocks of code based on which condition is true. 
+The Elif statement in Python stands for "else if." It allows us to check multiple conditions, providing a way to execute different blocks of code based on which condition is true. 
 
 ```python
 age = 25
@@ -65,7 +59,8 @@ else:
     print("Adult.")
 ```
 
-### if–elif–else Ladder
+
+### If–elif–else Ladder
 
 Used to evaluate multiple conditions sequentially.
 
@@ -85,7 +80,6 @@ else:
 Only the first true condition is executed.
 
 
-
 ### Nested Conditionals
 
 A conditional inside another conditional.
@@ -102,11 +96,7 @@ if username == "admin":
 else:
     print("Invalid username")
 ```
-
-
 Nested conditionals are useful for multi-level validation.
-
-
 
 
 ### Ternary Conditional Statement
@@ -118,9 +108,7 @@ age = 20
 s = "Adult" if age >= 18 else "Minor"
 print(s)
 ```
-
 #### Here:
-
 - If age >= 18 is True, status is assigned "Adult".
 - Otherwise, status is assigned "Minor".
 
@@ -157,16 +145,8 @@ match number:
         print("Other number")
 ```
 
-
-
 ### Summary
-
 - Conditionals control the flow of a Python program
-
 - They are based on Boolean logic
-
 - Python relies on indentation instead of braces
-
 - Conditionals are essential for real-world applications
-
-
