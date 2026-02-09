@@ -138,7 +138,7 @@ for x in [0, 1, 2]:
 ```
 
 
-### The while Loop
+### while Loop
 With the **while loop** we can execute a set of statements **as long as a condition is True**.
 
 #### Example :
