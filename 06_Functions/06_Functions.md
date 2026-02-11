@@ -1,9 +1,8 @@
 ## 06 : Functions in Python
 
 ### Defining a Function
-
-We can define a function in Python using the `def` keyword.  
-A function might take input in the form of parameters.
+- We can define a function in Python using the `def` keyword.
+- A function might take input in the form of parameters.
 
 #### Syntax of Python Function Declaration :
 
@@ -12,7 +11,6 @@ def function_name(parameters):
     # body of function
     return expression
 ```
-
 #### Example :
 Here, we define a function using def that prints a welcome message when called.
 ```python
@@ -23,14 +21,14 @@ def fun():
 After creating a function in Python, we can call it by using the name of the function followed by parentheses containing parameters of that particular function.
 ```python
 def fun():
-    print("Welcome to GFG")
+    print("Welcome")
     
 fun()  # Driver code to call a function
 ```
 
 ### Function Arguments
-Arguments are the values passed inside the parentheses of the function.
-A function can have any number of arguments separated by a comma.
+- Arguments are the values passed inside the parentheses of the function.
+- A function can have any number of arguments separated by a comma.
 
 #### Syntax :
 ```python
@@ -54,8 +52,7 @@ print(evenOdd(7))
 ### Types of Function Arguments
 Python supports various types of arguments that can be passed at the time of the function call.
 
-1. Default Arguments
-A default argument is a parameter that assumes a default value if a value is not provided in the function call for that argument.
+1. **Default Arguments** : A default argument is a parameter that assumes a default value if a value is not provided in the function call for that argument.
 ```python
 def myFun(x, y=50):
     print("x: ", x)
@@ -63,9 +60,7 @@ def myFun(x, y=50):
 
 myFun(10)
 ```
-
-2. Keyword Arguments
-In keyword arguments, values are passed by explicitly specifying the parameter names, so the order doesn’t matter.
+2. **Keyword Arguments** : In keyword arguments, values are passed by explicitly specifying the parameter names, so the order doesn’t matter.
 ```python
 def student(fname, lname):
     print(fname, lname)
@@ -74,8 +69,7 @@ student(fname='Now', lname='Practice')
 student(lname='Practice', fname='Now')
 ```
 
-3. Positional Arguments
-In positional arguments, values are assigned to parameters based on their order in the function call.
+3. **Positional Arguments** : In positional arguments, values are assigned to parameters based on their order in the function call.
 ```python
 def nameAge(name, age):
     print("Hi, I am", name)
@@ -88,12 +82,11 @@ print("\nCase-2:")
 nameAge(27, "Suraj")
 ```
 
-4. Arbitrary Arguments
-In Python, arbitrary arguments allow passing a variable number of arguments using special symbols:
+4. **Arbitrary Arguments** : In Python, arbitrary arguments allow passing a variable number of arguments using special symbols:
 
-- *args → Non-keyword arguments
+- **``*args``** → Non-keyword arguments
 
-- **kwargs → Keyword arguments
+- **``**kwargs``** → Keyword arguments
 ```python
 def myFun(*args, **kwargs):
     print("Non-Keyword Arguments (*args):")
@@ -105,15 +98,15 @@ def myFun(*args, **kwargs):
         print(f"{key} == {value}")
 
 # Function call with both types of arguments
-myFun('Hey', 'Welcome', first='Geeks', mid='for', last='Geeks')
+myFun('Hey', 'Welcome', first='Sparsh', mid='J.', last='Roy')
 ```
 
 ### Function within Functions (Nested Functions)
-A function defined inside another function is called an inner function (or nested function).
-It can access variables from the enclosing function’s scope.
+- A function defined inside another function is called an inner function (or nested function).
+- It can access variables from the enclosing function’s scope.
 ```python
 def f1():
-    s = 'I love GeeksforGeeks'
+    s = 'I love Python'
     def f2():
         print(s)
         
@@ -123,8 +116,8 @@ f1()
 ```
 
 ### Anonymous Functions (Lambda Functions)
-An anonymous function is a function without a name.
-The lambda keyword is used to create anonymous functions.
+- An anonymous function is a function without a name.
+- The lambda keyword is used to create anonymous functions.
 ```python
 def cube(x): 
     return x*x*x   # without lambda
@@ -136,9 +129,8 @@ print(cube_l(7))
 ```
 
 ### Return Statement in Function
-The return statement ends a function and sends a value back to the caller.
-
-It can return any data type, multiple values (as a tuple or none if no value is given.
+- The return statement ends a function and sends a value back to the caller.
+- It can return any data type, multiple values (as a tuple or none if no value is given.
 
 #### Syntax :
 ```python
@@ -156,11 +148,8 @@ print(square_value(-4))
 ```
 
 ### Pass by Reference and Pass by Value
-In Python, variables are references to objects.
-Python uses pass-by-object-reference.
-
+In Python, variables are references to objects. Python uses pass-by-object-reference.
 - **Mutable objects** → Changes affect original object
-
 - **Immutable objects** → Original value remains unchanged
 ```python
 # Function modifies the first element of list
@@ -179,3 +168,96 @@ a = 10
 myFun2(a)
 print(a)     # integer is not modified
 ```
+
+### Recursive Functions
+- A recursive function is a function that calls itself to solve a problem.
+- Always include a base case to avoid infinite recursion.
+```python
+def factorial(n):
+    if n == 0:  
+        return 1
+    else:
+        return n * factorial(n - 1) 
+      
+print(factorial(4))
+```
+#### Structure of Recursive Function :
+```python
+def recursive_function(parameters):
+    if base_case_condition:
+        return base_result
+    else:
+        return recursive_function(modified_parameters)
+```
+Recursive function contains two key parts:
+- **Base Case** → Stopping condition
+- **Recursive Case** → Function calls itself
+
+#### Example 1: Factorial Calculation
+```python
+def factorial(n):
+    if n == 0:  # Base case
+        return 1
+    else:       # Recursive case
+        return n * factorial(n - 1)
+
+print(factorial(5))
+```
+
+#### Example 2: Fibonacci Sequence
+```python
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+print(fibonacci(10))
+```
+
+#### When to Avoid Recursion
+- When the problem can be solved easily with loops.
+- When recursion depth is large enough to risk a stack overflow.
+- When performance is critical and function call overhead matters.
+
+
+### Python Lambda Functions
+Lambda functions are small anonymous functions created using the lambda keyword.
+
+**Key Features** :
+- No name unless assigned to a variable
+- Only one expression
+- Implicit return
+
+### Example :
+```python
+a = 'Hello'
+upper = lambda x: x.upper()
+print(upper(a))
+```
+
+#### Syntax of Lambda Expression
+```python
+lambda arguments: expression
+```
+**Breakdown** :
+- lambda → Keyword to define anonymous function
+- arguments → Input parameter
+- expression → Operation performed and returned
+
+#### Example :
+```python
+square = lambda x: x**2
+```
+
+### Conclusion
+Functions in Python are essential for:
+- Code reusability
+- Modularity
+- Clean structure
+- Recursion and problem solving
+- Advanced concepts like decorators and higher-order functions
+  
+Mastering functions is fundamental before moving to advanced Python topics.
