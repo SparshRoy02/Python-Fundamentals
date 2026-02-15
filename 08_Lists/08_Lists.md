@@ -1,10 +1,10 @@
 ## 08 : Lists in Python
 
 ### Introduction
-- Lists are ordered collections of data items.
-- They store multiple items in a single variable.
-- List items are separated by commas and enclosed within square brackets [].
-- Lists are changeable, meaning we can alter them after creation.
+- **Lists** are **ordered collections** of data items.
+- They store **multiple items in a single variable**.
+- List items are separated by **commas and enclosed within square brackets []**.
+- Lists are **changeable**, meaning we can alter them after creation.
 
 #### Example 1:
 ```python
@@ -17,7 +17,7 @@ print(lst2)
 
 
 ### List Indexes
-Each item/element in a list has its own unique index. This index can be used to access any particular item from the list. The first item has index [0], the second item has index [1], the third item has index [2], and so on.
+Each item/element in a list has its own **unique index**. This index can be used to access any particular item from the list. The first item has index [0], the second item has index [1], the third item has index [2], and so on.
 
 #### Example:
 ```python
@@ -26,7 +26,7 @@ colors = ["Red", "Green", "Blue", "Yellow", "Green"]
 ```
 
 ### Accessing list items:
-#### Positive Indexing:
+- **Positive Indexing**
 As we have seen that list items have an index, we can access items using these indexes.
 
 #### Example:
@@ -38,7 +38,7 @@ print(colors[4])
 print(colors[0])
 ```
 
-#### Negative Indexing:
+- **Negative Indexing**
 Similar to positive indexing, negative indexing is also used to access items, but from the end of the list. The last item has index [-1], the second last item has index [-2], the third last item has index [-3], and so on.
 
 #### Example:
@@ -51,8 +51,8 @@ print(colors[-5])
 ```
 
 
-#### Check for item:
-We can check if a given item is present in the list. This is done using the in keyword.
+### Check for item:
+We can check if a given item is present in the list. This is done using the ``in`` **keyword**.
 ```python
 colors = ["Red", "Green", "Blue", "Yellow", "Green"]
 if "Yellow" in colors:
@@ -62,7 +62,7 @@ else:
 ```
 
 
-#### Range of Index:
+### Range of Index:
 You can print a range of list items by specifying where you want to start, where you want to end, and if you want to skip elements in between the range.
 
 #### Syntax:
@@ -72,7 +72,7 @@ List[start : end : jumpIndex]
 
 **Note** : jumpIndex is optional. We will see this in given examples.
 
-#### Example: printing elements within a particular range:
+- **Example : printing elements within a particular range**
 ```python
 animals = ["cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow"]
 print(animals[3:7])  # using positive indexes
@@ -85,7 +85,7 @@ Here, we provide the index of the element from where we want to start and the in
 
 
 
-#### Example: print alternate values
+- **Example: print alternate values**
 ```python
 animals = ["cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow"]
 print(animals[::2])  # using positive indexes
@@ -97,24 +97,22 @@ Here, we have not provided start and end indexes, which means all the values wil
 
 
 ### Add List Items
-There are three methods to add items to a list: append(), insert(), and extend().
+There are **three methods** to add items to a list: **append()**, **insert()**, and **extend()**.
 
-#### append():
-This method appends items to the end of the existing list.
+### append():
+This method appends items to the **end** of the existing list.
 
-##### Example:
+#### Example:
 ```python
 colors = ["violet", "indigo", "blue"]
 colors.append("green")
 print(colors)
 ```
 
+### insert():
+This method inserts an item at the given index. The user has to **specify the index** and the item to be **inserted within the ``insert()`` method**.
 
-
-#### insert():
-This method inserts an item at the given index. The user has to specify the index and the item to be inserted within the insert() method.
-
-##### Example:
+#### Example:
 ```python
 colors = ["violet", "indigo", "blue"]
 #           [0]        [1]      [2]
@@ -126,12 +124,10 @@ colors.insert(1, "green")   # inserts item at index 1
 print(colors)
 ```
 
+### extend():
+This method adds an entire list or any **other collection datatype** to the existing list.
 
-
-#### extend():
-This method adds an entire list or any other collection datatype (set, tuple, dictionary) to the existing list.
-
-##### Example 1:
+#### Example 1:
 ```python
 # add a list to a list
 colors = ["violet", "indigo", "blue"]
@@ -140,12 +136,10 @@ colors.extend(rainbow)
 print(colors)
 ```
 
-
-
-#### Concatenate two lists:
+### Concatenate two lists:
 You can simply concatenate two lists to join them.
 
-##### Example:
+#### Example:
 ```python
 colors = ["violet", "indigo", "blue", "green"]
 colors2 = ["yellow", "orange", "red"]
@@ -156,27 +150,27 @@ print(colors + colors2)
 ### Remove List Items
 There are various methods to remove items from the list: pop(), remove(), del, clear()
 
-#### pop():
-This method removes the last item of the list if no index is provided. If an index is provided, then it removes the item at that specified index.
+### pop():
+This method removes the **last item** of the list if no index is provided. If an index is provided, then it removes the item at that specified index.
 
-##### Example 1:
+#### Example 1:
 ```python
 colors = ["Red", "Green", "Blue", "Yellow", "Green"]
 colors.pop()        # removes the last item of the list
 print(colors)
 ```
 
-##### Example 2:
+#### Example 2:
 ```python
 colors = ["Red", "Green", "Blue", "Yellow", "Green"]
 colors.pop(1)       # removes item at index 1
 print(colors)
 ```
 
-#### remove():
-This method removes a specific item from the list.
+### remove():
+This method removes a **specific item** from the list.
 
-##### Example:
+#### Example:
 ```python
 colors = ["violet", "indigo", "blue", "green", "yellow"]
 colors.remove("blue")
