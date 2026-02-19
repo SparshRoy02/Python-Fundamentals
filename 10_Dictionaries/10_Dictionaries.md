@@ -1,12 +1,12 @@
 ## 10 : Dictionaries in Python
 
-A **dictionary** in Python is a built-in data type used to store data in **key-value pairs** that are separated by commas and enclosed within **curly brackets {}**. Dictionary items are stored as key-value pairs, separated by commas and enclosed within curly brackets {}.
+A **dictionary** in Python is a built-in data type used to store data in **key-value pairs** that are separated by commas and enclosed within **curly brackets { }**. Dictionary items are stored as key-value pairs, separated by commas and enclosed within curly brackets { }.
 
 ### Explanation :
 - Each **key** has a corresponding **value**.
 - **Keys must be unique**.
 - Dictionaries are **mutable (changeable)**.
-- Written inside **curly braces {}**.
+- Written inside **curly braces { }**.
 - **Syntax** : {key: value}
 
 #### Example :
@@ -22,13 +22,13 @@ print(student)
 
 ### Creating a Dictionary
 
-#### Using Curly Braces {}
+### Using Curly Braces {}
 A dictionary is created by writing key-value pairs inside ``{ }``, where each key is connected to a value using colon ``(:)``. 
 ```python
 person = {"name": "Aman", "city": "Delhi"}
 ```
 
-#### Using dict() Constructor
+### Using dict() Constructor
 A dictionary can also be created using the ``dict()`` function.
 ```python
 person = dict(name="Aman", city="Delhi")
@@ -37,7 +37,8 @@ person = dict(name="Aman", city="Delhi")
 
 ### Accessing Dictionary Items:
 
-**1. Accessing Single Values**:
+**1. Accessing Single Values :** 
+
 Values in a dictionary can be accessed using keys. We can access dictionary values by mentioning keys either in **square brackets** or by **using the ``get`` method**.
 
 #### Example :
@@ -47,7 +48,8 @@ print(info['name'])
 print(info.get('eligible'))
 ```
 
-**2. Accessing Multiple Values**:
+**2. Accessing Multiple Values :**
+
 We can print all the values in the dictionary using the ``values()`` method.
 
 #### Example :
@@ -56,7 +58,8 @@ info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info.values())
 ```
 
-**3. Accessing Keys**:
+**3. Accessing Keys :**
+
 We can print all the keys in the dictionary using the ``keys()`` method.
 
 #### Example :
@@ -65,7 +68,8 @@ info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info.keys())
 ```
 
-**4. Accessing Key-Value Pairs**:
+**4. Accessing Key-Value Pairs :**
+
 We can print all the key-value pairs in the dictionary using the ``items()`` method.
 
 #### Example :
@@ -80,7 +84,7 @@ print(info.items())
 ### Adding items to a dictionary :
 There are two common ways to add items to a dictionary.
 
-**1. Create a new key and assign a value to it**
+**1. Create a new key and assign a value to it :** 
 #### Example :
 ```python
 info = {'name': 'Karan', 'age': 19, 'eligible': True}
@@ -89,7 +93,8 @@ info['DOB'] = 2001
 print(info)
 ```
 
-**2. Use the ``update()`` method**
+**2. Use the ``update()`` method :**
+
 The ``update()`` method updates the value of an existing key, and if the key does not exist, it creates a new key-value pair.
 
 #### Example :
@@ -102,7 +107,7 @@ print(info)
 ```
 
 
-### Removing items from dictionary:
+### Removing items from dictionary :
 There are several methods available to remove items from a dictionary.
 
 ### clear()
@@ -146,6 +151,7 @@ print(info)
 ```
 
 
+### Note :
 If a **key is not provided**, the **del keyword** will delete the **entire dictionary**.
 
 #### Example :
@@ -195,6 +201,7 @@ for key, value in d.items():
 ### Dictionary Methods
 Python has a set of built-in methods that you can use on dictionaries.
 
+
 | Method    | Description |
 |-----------|-------------|
 | `keys()`  | Returns a list containing the dictionary's keys |
@@ -210,15 +217,15 @@ d = {
      "subjects": ["math", "science", "physics"],  
      "cgpa": 9.5  
 }  
-print(d.keys())           # dict_keys  
-print(d.values())         # dict_values  
-print(d.items())          # dict_items 
+print(d.keys())                  # dict_keys  
+print(d.values())                # dict_values  
+print(d.items())                 # dict_items 
 
 info = {'name':'Karan', 'age':19, 'eligible':True, 'DOB':2003}
-newDictionary = info.copy()    # dict_copy
+newDictionary = info.copy()      # dict_copy
 print(newDictionary)
 
-new_item = {"city": "Delhi"}   # dict_update
+new_item = {"city": "Delhi"}     # dict_update
 print(d.update(new_item))  
 print(d) 
 ```
