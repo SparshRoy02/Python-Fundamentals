@@ -1,13 +1,12 @@
 ## 10 : Dictionaries in Python
 
-A dictionary in Python is a built-in data type used to store data in **key-value pairs** that are separated by commas and enclosed within curly brackets {}. Dictionary items are stored as key-value pairs, separated by commas and enclosed within curly brackets {}.
-
+A **dictionary** in Python is a built-in data type used to store data in **key-value pairs** that are separated by commas and enclosed within **curly brackets {}**. Dictionary items are stored as key-value pairs, separated by commas and enclosed within curly brackets {}.
 
 ### Explanation :
-- Each key has a corresponding value.
-- Keys must be unique.
-- Dictionaries are mutable (changeable).
-- Written inside curly braces {}.
+- Each **key** has a corresponding **value**.
+- **Keys must be unique**.
+- Dictionaries are **mutable (changeable)**.
+- Written inside **curly braces {}**.
 - **Syntax** : {key: value}
 
 #### Example :
@@ -21,26 +20,25 @@ print(student)
 ```
 
 
-
 ### Creating a Dictionary
 
 #### Using Curly Braces {}
-A dictionary is created by writing key-value pairs inside { }, where each key is connected to a value using colon (:). 
+A dictionary is created by writing key-value pairs inside ``{ }``, where each key is connected to a value using colon ``(:)``. 
 ```python
 person = {"name": "Aman", "city": "Delhi"}
 ```
 
 #### Using dict() Constructor
-A dictionary can also be created using the dict() function.
+A dictionary can also be created using the ``dict()`` function.
 ```python
 person = dict(name="Aman", city="Delhi")
 ```
 
 
-
 ### Accessing Dictionary Items:
-1. Accessing Single Values:
-Values in a dictionary can be accessed using keys. We can access dictionary values by mentioning keys either in square brackets or by using the ``get`` method.
+
+**1. Accessing Single Values**:
+Values in a dictionary can be accessed using keys. We can access dictionary values by mentioning keys either in **square brackets** or by **using the ``get`` method**.
 
 #### Example :
 ```python
@@ -49,8 +47,8 @@ print(info['name'])
 print(info.get('eligible'))
 ```
 
-2. Accessing Multiple Values:
-We can print all the values in the dictionary using the values() method.
+**2. Accessing Multiple Values**:
+We can print all the values in the dictionary using the ``values()`` method.
 
 #### Example :
 ```python
@@ -58,8 +56,8 @@ info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info.values())
 ```
 
-3. Accessing Keys:
-We can print all the keys in the dictionary using the keys() method.
+**3. Accessing Keys**:
+We can print all the keys in the dictionary using the ``keys()`` method.
 
 #### Example :
 ```python
@@ -67,8 +65,8 @@ info = {'name':'Karan', 'age':19, 'eligible':True}
 print(info.keys())
 ```
 
-4. Accessing Key-Value Pairs:
-We can print all the key-value pairs in the dictionary using the items() method.
+**4. Accessing Key-Value Pairs**:
+We can print all the key-value pairs in the dictionary using the ``items()`` method.
 
 #### Example :
 ```python
@@ -77,13 +75,12 @@ print(info.items())
 ```
 
 
+### Adding and Removing Items
 
-### Add and Remove Items
-
-### Adding items to a dictionary:
+### Adding items to a dictionary :
 There are two common ways to add items to a dictionary.
 
-1. Create a new key and assign a value to it:
+**1. Create a new key and assign a value to it**
 #### Example :
 ```python
 info = {'name': 'Karan', 'age': 19, 'eligible': True}
@@ -92,8 +89,8 @@ info['DOB'] = 2001
 print(info)
 ```
 
-2. Use the update() method:
-The update() method updates the value of an existing key, and if the key does not exist, it creates a new key-value pair.
+**2. Use the ``update()`` method**
+The ``update()`` method updates the value of an existing key, and if the key does not exist, it creates a new key-value pair.
 
 #### Example :
 ```python
@@ -109,7 +106,7 @@ print(info)
 There are several methods available to remove items from a dictionary.
 
 ### clear()
-The clear() method removes all the items from the dictionary.
+The clear() method removes **all the items** from the dictionary.
 
 #### Example :
 ```python
@@ -119,7 +116,7 @@ print(info)
 ```
 
 ### pop() 
-The pop() method removes the key-value pair whose key matches the parameter passed.
+The pop() method removes the **key-value pair** whose key matches the **parameter** passed.
 
 #### Example :
 ```python
@@ -129,7 +126,7 @@ print(info)
 ```
 
 ### popitem()
-The ``popitem()`` method removes the last inserted key-value pair from the dictionary.
+The ``popitem()`` method removes the **last inserted** key-value pair from the dictionary.
 
 #### Example :
 ```python
@@ -139,7 +136,7 @@ print(info)
 ```
 
 ### del
-Apart from these three methods, we can also use the del keyword to remove a dictionary item.
+Apart from these three methods, we can also use the del keyword to **remove a dictionary item**.
 
 #### Example :
 ```python
@@ -149,7 +146,7 @@ print(info)
 ```
 
 
-If a key is not provided, the del keyword will delete the entire dictionary.
+If a **key is not provided**, the **del keyword** will delete the **entire dictionary**.
 
 #### Example :
 ```python
@@ -198,7 +195,6 @@ for key, value in d.items():
 ### Dictionary Methods
 Python has a set of built-in methods that you can use on dictionaries.
 
-
 | Method    | Description |
 |-----------|-------------|
 | `keys()`  | Returns a list containing the dictionary's keys |
@@ -230,7 +226,7 @@ print(d)
 
 ### Nested Dictionary 
 
-A nested dictionary is a dictionary that contains another dictionary as one of its values. 
+A **nested dictionary** is a dictionary that contains another dictionary as one of its values. 
 ```python
 students = {
     "student1": {"name": "Rahul", "age": 21},
@@ -248,7 +244,6 @@ print(students["student1"]["name"])
 Dictionaries are one of the most powerful and commonly used data structures in Python.  
 They allow us to store data in a **key-value pair format**, making data retrieval fast, organized, and efficient.
 
-
 Dictionaries are widely used in:
 - Storing user data
 - Configuration settings
@@ -257,8 +252,4 @@ Dictionaries are widely used in:
 - Database-like record structures
 
 Understanding dictionaries is essential because they are heavily used in real-world applications, data analysis, backend development, and competitive programming.
-
-
-
-
 
