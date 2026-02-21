@@ -1,15 +1,14 @@
-# 11 : Sets in Python
+## 11 : Sets in Python
 
-## Introduction to Sets
+### Introduction to Sets
 
 A Set is a built-in data type in Python used to store multiple items in a single variable. Sets are useful when we want only unique values.
-
 - Sets are unordered.
 - Sets are mutable.
 - Sets do not allow duplicate values.
 - Sets are written using curly brackets `{ }`.
 
-Example:
+#### Example :
 ```python
 my_set = {1, 2, 3, 4}
 print(my_set)
@@ -19,9 +18,7 @@ info = {"Carla", 19, False, 5.9, 19}
 print(info)
 ```
 
----
-
-## Characteristics of Sets
+### Characteristics of Sets :
 
 ### 1. Unordered
 Unordered means that the items in a set do not have a defined order.
@@ -31,8 +28,6 @@ s = {"apple", "banana", "cherry"}
 print(s)
 ```
 
----
-
 ### 2. No Duplicates
 Duplicate values are automatically removed.
 
@@ -41,7 +36,6 @@ s = {1, 2, 2, 3, 4}
 print(s)  # Output: {1, 2, 3, 4}
 ```
 
----
 
 ### 3. Mutable
 We can add or remove elements after creation.
@@ -52,8 +46,6 @@ s.add(4)
 print(s)
 ```
 
----
-
 ### 4. Heterogeneous Elements
 A set can contain different data types.
 
@@ -62,9 +54,7 @@ s = {1, "hello", 3.14, True}
 print(s)
 ```
 
----
-
-## Creating a Set
+### Creating a Set :
 
 ### Using Curly Braces
 ```python
@@ -84,9 +74,8 @@ empty_set = set()
 print(type(empty_set))
 ```
 
----
 
-## Accessing Set Items
+### Accessing Set Items
 
 Sets are unordered, so we cannot access items using indexing.
 
@@ -98,9 +87,7 @@ for item in s:
     print(item)
 ```
 
----
-
-## Adding Items to Set
+### Adding Items to Set :
 
 ### add() Method
 Adds a single element.
@@ -120,9 +107,7 @@ s.update([3, 4])
 print(s)
 ```
 
----
-
-## Removing Items from Set
+### Removing Items from Set :
 
 ### remove()
 Removes specified item. Raises error if not present.
@@ -160,18 +145,15 @@ s.clear()
 print(s)
 ```
 
----
 
-## Deleting a Set
+### Deleting a Set
 
 ```python
 s = {1, 2}
 del s
 ```
 
----
-
-## Set Operations
+### Set Operations :
 
 ### Union
 Combines elements of both sets.
@@ -203,9 +185,7 @@ Elements in either set but not both.
 print(a.symmetric_difference(b))
 ```
 
----
-
-## Set Methods
+### Set Methods :
 
 ### copy()
 Returns shallow copy.
@@ -241,9 +221,7 @@ Checks if superset.
 print(b.issuperset(a))
 ```
 
----
-
-## Frozen Set
+### Frozen Set
 
 A frozenset is an immutable version of a set. It contains unique, unordered, unchangeable elements. Unlike sets, elements cannot be added or removed from a frozenset.
 
@@ -252,14 +230,9 @@ fs = frozenset([1, 2, 3])
 print(fs)
 ```
 
-
----
-
-# Conclusion
-
+### Conclusion
 
 Sets are one of the most powerful and efficient data structures in Python when dealing with unique elements and mathematical operations.
-
 - Sets are unordered and do not allow duplicate values.
 - They are mutable, allowing elements to be added or removed.
 - They are highly efficient for membership testing (`in` operator).
