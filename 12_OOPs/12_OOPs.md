@@ -1,23 +1,20 @@
 ## 12 : Object Oriented Programming in Python
 
-
 ### Introduction :
 
-Object-Oriented Programming (OOP) is a programming paradigm that organizes code into **objects** — bundles of data (attributes) and behavior (methods).
+**Object-Oriented Programming (OOP)** is a programming paradigm that organizes code into **objects** — bundles of **data (attributes)** and **behavior (methods)**.
 
 It helps us:
-- Structure programs in a modular way
-- Improve reusability
-- Improve maintainability
-- Model real-world entities
+- Structure programs in a **modular way**
+- Improve **reusability**
+- Improve **maintainability**
+- Model **real-world entities**
 
 
 ### Classes and Objects
 
 ### Class
-
-A **class** is a blueprint/template used to create objects. It describes what an object will look like (its attributes) and what it can do (its 
-methods), but it is not the object itself. 
+A **class** is a **blueprint/template** used to create objects. It describes what an object will look like (**attributes**) and what it can do (**methods**), but it is not the object itself. 
 
 ```python
 class Car:  
@@ -25,8 +22,7 @@ brand = "Toyota"
 ```
 
 ### Object 
-
-An object (or instance) is a realization of a class, it is the actual thing created based on the class blueprint.
+An **object (or instance)** is a realization of a class, it is the actual thing created based on the class blueprint.
 
 ```python
 car1 = Car()  
@@ -34,12 +30,11 @@ car2 = Car()
 print(car1.brand)      # Toyota
 print(car2.brand)      # Toyota  
 ```
-We use the dot (.) operator to access attributes and methods.
+We use the **dot (.) operator** to access attributes and methods.
 
 
 
 ### Class vs Object
-
 
 | Class | Object |
 |--------|---------|
@@ -49,15 +44,13 @@ We use the dot (.) operator to access attributes and methods.
 
 
 ### Attributes & Methods 
-Attributes are variables and Methods are functions defined inside a class.  
-
-
+- **Attributes** → Variables inside a class
+- **Methods** → Functions defined inside a class 
 
 ### Constructor in OOP
-
-- A constructor initializes newly created objects.
-- It is not responsible for creating the object, instead the constructor sets up the object with initial values. 
-- In Python, constructor is defined using:   __init__(self)
+- A **constructor** initializes newly created objects.
+- It is not responsible for creating the object, instead the constructor sets up the object with **initial values**. 
+- In Python, constructor is defined using ``__init__(self)``
 - It is automatically called when an object is created.
 
 ```python
@@ -68,10 +61,9 @@ class Student:
 stu1 = Student()
 ```
 
-
 ### ``self`` Keyword
-
-``self`` is a special parameter which refers to the instance of the class that is calling the method. We don’t need to pass it explicitly. 
+- ``self`` is a special parameter which refers to the **current instance** of the class that is calling the method.
+- We don’t need to pass it explicitly. 
 
 We can also use constructor to initialize values for objects: 
 
@@ -84,10 +76,11 @@ stu1 = Student("Rahul")
 print(stu1.name)
 ```
 
-
 ### Types of Constructors
-1. Default Constructors - A constructor with no parameters except ``self`` 
-2. Parameterized Constructors - Takes parameters to initialize values uniquely for each object. 
+**1. Default Constructors**
+- A constructor with no parameters except ``self`` 
+**2. Parameterized Constructors**
+- Takes parameters to **initialize** values uniquely for each object. 
 
 ```python
 class Student:
@@ -97,63 +90,60 @@ class Student:
 
 s1 = Student("Rahul", 8.7)
 ```
-- Python does NOT support constructor overloading like Java/C++.
+- **Note :** Python does NOT support constructor overloading like Java/C++.
 
 ### Attributes in OOP
+Attributes are variables that **belong** to a **class or an object**. They store **data/state** of the object.
 
-Attributes are variables that belong to a class or an object. They store data/state of the object.
+Types of Attributes :
 
-Types of Attributes 
-
-1. Class Attributes 
+**1. Class Attributes** 
 - Belong to the **class itself**, shared by all objects. 
 - Defined **outside** any method in the class. 
 
 ```python
 class Student:  
-   college = "ABC college"    # class attribute  
+    college = "ABC college"    # class attribute  
 stu1 = Student ()  
 print(stu1.college)  
 print(Student.college)     # class attribute can also be accessed with class name
 ```
 
-
-2. Instance Attributes 
+**2. Instance Attributes** 
 - Belong individually to each object. 
 - Defined inside the ``__init__`` method using ``self``.         . 
 - Each object gets its own copy. 
 
 ```python
 class Student:   
-   def __init__ (self, name, gpa):      # instance attributes  
-      self.name = name  
-      self.gpa = gpa  
+    def __init__ (self, name, gpa):      # instance attributes  
+       self.name = name  
+       self.gpa = gpa  
 stu1 = Student("Rahul", 8.7)  
-print(stu1. name, stu1.gpa) 
-
-
-### NMethods in OOP
-
-Methods are functions defined inside a class, representing the behaviour or 
-actions of an object. 
- 
-Types of Methods:
-
-1. Instance Methods 
-- Take ``self`` as the first argument. 
-- Can access both **instance attributes* and **class attributes**. 
-```python
-class Student:  
-   def   init  (self, name, marks):  
-      self.name = name  
-      self. marks = marks  
-
-   def display(self):          # Instance method  
-      print(f"Name: {self.name}, Marks: {self.marks}")
+print(stu1. name, stu1.gpa)
 ```
 
 
-2. Class Methods 
+### Methods in OOP
+Methods are functions defined inside a class, representing the **behaviour or actions** of an object. 
+ 
+Types of Methods:
+
+**1. Instance Methods** 
+- Take ``self`` as the first argument. 
+- Can access both **instance attributes** and **class attributes**. 
+```python
+class Student:  
+    def __init__(self, name, marks):  
+        self.name = name  
+        self. marks = marks  
+
+    def display(self):          # Instance method  
+        print(f"Name: {self.name}, Marks: {self.marks}")
+```
+
+
+**2. Class Methods** 
 - Use ``@classmethod`` decorator. 
 - Take ``cls`` (class) as first argument. 
 - Used to work with **class-level data**. 
@@ -167,57 +157,55 @@ class Student:
        cls.school_name = new_name 
 ```
 
-3. Static Methods 
-• Use ``@staticmethod`` decorator. 
-• Do not take ``self`` or ``cls``. 
-• Behave like normal functions but belong to the class for logical grouping. 
+**3. Static Methods** 
+- Use ``@staticmethod`` decorator.
+- Do not take ``self`` or ``cls``.
+- Behave like normal functions but belong to the class for logical grouping. 
 
 ```python
 class Math:  
-   @staticmethod  
-   def add(a, b):  
-       return a + b 
+    @staticmethod  
+    def add(a, b):  
+        return a + b 
 ```
 
 
 ### The 4 Pillars of OOP
 
-
 ### Encapsulation 
-Encapsulation is the bundling of data (variables) and methods (functions) that operate on that data into a single unit (a class).
+Encapsulation is the bundling of **data (variables)** and **methods (functions)** that operate on that data into a **single unit (a class)**.
  
 To implement encapsulation, we use access modifiers. Python has 3 access levels: 
  
-1. Public members 
-- Accessible everywhere, written like normal variables. 
+**1. Public members**
+- Accessible **everywhere**, written like normal variables. 
 
 ```python
 class Student:  
-   def __init__  (self, name):  
-       self.name = name   # public variable  
+    def __init__  (self, name):  
+        self.name = name   # public variable  
 
 s = Student("Rahul")  
-print(s.name)           # Allowed 
+print(s.name)             # Allowed 
 ```
 
-2. Protected members 
-- Indicated by a **single underscore _** (suggest - “Don’t access directly unless needed.”) 
-- Still accessible from outside (not truly protected). 
+**2. Protected members** 
+- Indicated by a **single underscore _** 
+- Still **accessible** from **outside** (not truly protected). 
 - Intended for internal use or inheritance. 
 
 ```python
 class Person:  
    def __init__ (self):  
-       self._age = 20  # protected variable  
+       self._age = 20   # protected variable  
 
 p = Person()  
-print(p._age)  # Technically allowed, but not recommended 
+print(p._age)          # Technically allowed, but not recommended 
 ```
 
- 
-3. Private members 
+**3. Private members**
 - Indicated by a **double underscore __**
-- Python does name mangling: the variable name becomes ``_ClassName__variable```.                                 . 
+- Python does **name mangling** : the variable name becomes ``_ClassName__variable```.                                 . 
 - Cannot be accessed directly from outside. 
 
 ```python
@@ -229,17 +217,13 @@ b = Bank(5000)
 print(b.__balance)        # ERROR: attribute not accessible 
 ```
 
-To access:
+**To access** :
 ```python 
 print(b._Bank__balance)     # Allowed (name-mangled form)
 ```
 
-
-
 ### Getters & Setters
- 
-When we make a variable private, we use methods to read it (getters) or update it 
-(setters). 
+ When we make a variable private, we use methods to read it (getters) or update it (setters). 
 
 ```python
 class Employee:  
@@ -259,17 +243,16 @@ e.set_salary(60000)
 
 
 ### Inheritance
- 
-- Inheritance is where one class (child) acquires the properties and behaviors (variables + methods) of another class (parent). 
-- The class whose properties are inherited - Parent / Base / Superclass  
-- The class that inherits - Child / Derived / Subclass 
+- Inheritance is where **one class (child)** acquires the properties and behaviors (variables + methods) of **another class (parent)**. 
+- The class whose properties are inherited - **Parent / Base / Superclass**  
+- The class that inherits - **Child / Derived / Subclass** 
 
 ```python
-class Employee:            # parent class  
+class Employee:              # parent class  
     start_time = "9AM"  
     end_time = "5PM"  
 
-class Teacher(Employee):   # child class  
+class Teacher(Employee):     # child class  
     def __init__(self, subject):  
         self.subject = subject  
 
@@ -285,10 +268,10 @@ Inheritance enables:
 - Polymorphism  
 
 
-Types of Inheritance 
+### Types of Inheritance 
 
-1. Single Inheritance 
-A child inherits from one parent. 
+**1. Single Inheritance** 
+A child **inherits** from **one parent**. 
 
 ```python
 # Parent → Child  
@@ -301,12 +284,11 @@ class Child(Parent):
     pass 
  
 c = Child()  
-c.display()    # Output: Parent class
+c.display()         # Output: Parent class
 ```
 
-
-2. Multi-level Inheritance 
-A child inherits from a parent, and another class inherits from the child.
+**2. Multi-level Inheritance** 
+A child **inherits** from **a parent**, and **another class inherits** from the **child**.
 
 ```python 
 # Grandparent(Employee) → Parent(AdminStaff) → Child(Accountant)  
@@ -329,11 +311,8 @@ acc1 = Accountant(50_000, "CA")
 print(acc1.salary, acc1.role, acc1.start_time, acc1.end_time)
 ```
 
-
-
-
-3. Multiple Inheritance 
-A child inherits from more than one parent class. 
+**3. Multiple Inheritance**
+A child **inherits** from **more than one parent class**. 
 
 ```python
 class Teacher:  
@@ -354,23 +333,19 @@ ta = TA("Rahul", 50_000, 7.5)
 
 print(ta.name, ta.salary, ta.gpa)
 ```
-- super() keyword - Used to call parent class’s method from child class. 
-
-
-
-
+- ``super()`` keyword - Used to call **parent class’s method** from child class. 
 
 ### Abstraction 
-Abstraction is hiding unnecessary implementation details and showing only the 
-essential features to the user.
+**Abstraction** is **hiding unnecessary implementation** details and showing only the essential features to the user.
 
-Example - In real life when we drive a car & press the breaks, the car stops. But we don’t need to know how the hydraulic systems work. To implement same idea in 
+#### Example
+In real life when we drive a car & press the breaks, the car stops. But we don’t need to know how the hydraulic systems work. To implement same idea in 
 Python, we have abstraction. 
 
-We implement abstraction with abstract classes & abstract methods. 
+We implement abstraction with **abstract classes** & **abstract methods**. 
 
 #### Abstract Class 
-An abstract class in Python is one which: 
+An abstract class in Python is one which : 
 - Cannot be instantiated 
 - Can contain normal + abstract methods 
 - Usually acts as a blueprint for child classes
@@ -382,17 +357,17 @@ class Animal(ABC):
     @abstractmethod  
     def sound(self):  
         pass
+```
 
-
-### Abstract Method 
-It is a method declared but not implemented (Children must override abstract methods). 
+###  Abstract Method 
+It is a method **declared** but **not implemented** (Children must override abstract methods). 
 
 ```python
 @abstractmethod  
 def method_name(self): 
 ```
 
-- Example of Abstraction 
+**Abstraction Example**
 
 ```python
 from abc import ABC, abstractmethod  
@@ -417,7 +392,72 @@ cow = Cow()
 cow.make_sound()
 ```
 
+### Polymorphism 
+**Polymorphism** is the **ability** of a s**ingle function**, operator, or object to **behave differently** based on the context. (“poly” = many, “morph” = forms) 
 
+The idea is that: 
+- **Same method name** - works differently for different objects 
+- **Same operator** - behaves differently depending on operand types 
 
+Let’s look at an example: 
 
+```python
+print(1 + 2)          # adds 2 numbers  
+print("1" + "2")      # concatenates 2 strings
+```
+- Same ``‘+’`` operator being used for two different operations, called **Operator Overloading**. 
 
+Let’s look at two popular types of polymorphism: 
+
+**1. Function Overriding (or Method Overriding)**
+- When a **child class** provides its own version of a method that already exists in the **parent class** (Both methods should have same name) 
+- Type of **Runtime Polymorphism** (dynamic binding) 
+- Child method takes precedence over parent method. 
+
+```python
+class Animal:  
+    def sound(self):  
+        print("Some generic sound")
+  
+class Dog(Animal):  
+    def sound(self):  
+        print("Bark") 
+ 
+a = Animal()  
+dog = Dog()
+  
+a.sound()     # Some generic sound  
+dog.sound()   # Bark
+```
+
+**2. Duck Typing**
+- Works on the idea: “If it looks like a duck and quacks like a duck, it must be a duck.”
+
+```python 
+class Dog:  
+    def speak(self):  
+        print("Bark")  
+
+class Cat:  
+    def speak(self): 
+        print("Meow") 
+ 
+class Robot:  
+    def speak(self):  
+        print("Beep Boop") 
+ 
+def make_it_speak(entity):  
+    entity.speak()         # doesn’t care about type  
+
+d = Dog()  
+c = Cat()  
+r = Robot()  
+
+for e in [d, c, r]:  
+make_it_speak(e) 
+```
+
+### Summary
+- **Object-Oriented Programming (OOP)** is a programming approach that organizes code using **classes and objects**, combining **data (attributes)** and **behavior (methods)** into **structured units**.
+
+- It covers key concepts like **encapsulation**, **inheritance**, **abstraction**, and **polymorphism**, helping build modular, reusable, and maintainable Python applications.
