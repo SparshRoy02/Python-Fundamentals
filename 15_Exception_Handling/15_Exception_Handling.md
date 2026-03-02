@@ -7,6 +7,7 @@ Instead of stopping execution, Python:
 - **Detects errors**
 - **Handles them**
 - **Continues execution when possible**
+
 It helps in building **robust, stable and production-ready applications**.
 
 #### Basic Example : 
