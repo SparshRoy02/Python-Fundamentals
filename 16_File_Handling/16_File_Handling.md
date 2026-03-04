@@ -1,21 +1,21 @@
 ## 16 : File Handling in Python
 
 ### Introduction
-File handling refers to the process of performing operations on a file such as creating, opening, reading, writing, appending and deleting it through a programming interface. It manages the data flow between a Python program and the file system on the storage device, ensuring that data is handled safely and efficiently.
+**File handling** refers to the process of performing operations on a file such as **creating, opening, reading, writing, appending** and **deleting** it through a programming interface. It manages the **data flow between a Python program and the file system** on the storage device, ensuring that data is handled **safely and efficiently**.
 
 
 ### Why Do We Need File Handling
-File handling is used to store and manage data in external files so that information remains available even after the program finishes execution.
+**File handling** is used to **store and manage data in external files** so that information remains available even after the program finishes execution.
 
 ### Reasons for Using File Handling
-- To store data permanently even after the program ends
-- To access external files like `.txt`, `.csv`, `.json`
-- To process large files efficiently
-- To automate tasks like reading configuration files or saving program outputs
+- To **store data permanently** even after the program ends
+- To **access external files** like `.txt`, `.csv`, `.json`
+- To **process large files efficiently**
+- To **automate tasks** like reading configuration files or saving program outputs
 
 
 ### Opening a File
-Opening a file means establishing a connection between the Python program and the file so that operations like reading or writing can be performed.
+Opening a file means **establishing a connection between the Python program and the file** so that operations like **reading or writing** can be performed.
 
 #### Syntax
 ```python
@@ -23,11 +23,9 @@ file = open("filename.txt", "mode")
 ```
 
 #### Parameters
-
 - **filename.txt →** name or path of the file
 - **mode →** specifies how the file should be opened
-
-If mode is not specified, Python uses read (r) mode by default.
+If **mode is not specified**, Python uses **read** ``(r)`` **mode by default**.
 
 #### Example
 ```python
@@ -36,14 +34,13 @@ print(f)`
 ```
 
 #### Explanation
-- The file demo.txt is opened in read mode.
-- If the file exists, Python returns a file object.
-- If the file does not exist, Python raises FileNotFoundError.
-
+- The file ``demo.txt`` is opened in **read mode**.
+- If the file exists, Python returns a **file object**.
+- If the file does not exist, Python raises ``FileNotFoundError``.
 
 
 ### Closing a File
-Closing a file releases system resources and ensures that any changes made to the file are saved properly.
+Closing a file **releases system resources** and ensures that any changes made to the file are **saved properly**.
 
 #### Syntax
 ```python
@@ -57,10 +54,8 @@ file = open("demo.txt", "r")
 file.close()
 ```
 
-
-
 ### Checking File Properties
-Python allows checking certain properties of a file object such as its name, mode, and status.
+Python allows checking certain **properties of a file object** such as its **name, mode, and status**.
 
 #### Example
 ```python
@@ -75,38 +70,39 @@ print("Is Closed?", f.closed)
 ```
 
 #### Explanation
-- **f.name →** returns the name of the file
-- **f.mode →** shows the mode in which file is opened
-- **f.closed →** returns True if file is closed otherwise False
+- ``f.name`` → returns the **name of the file**
+- ``f.mode`` → shows the **mode in which file is opened**
+- ``f.closed`` → returns **True if file is closed** otherwise **False**
 
 
 ### File Opening Modes
-Modes determine how a file will be accessed (reading, writing, appending, etc).
+**Modes determine how a file will be accessed** (reading, writing, appending, etc).
 
 #### Modes
-Mode	Description
-r	Read mode (default). Error if file does not exist
-w	Write mode. Creates new file or overwrites existing file
-a	Append mode. Adds data at the end of file
-x	Create mode. Creates new file, error if file exists
 
+| Mode | Description |
+|------|-------------|
+| ``r`` | **Read mode** (default). Error if file does not exist |
+| ``w`` | **Write mode**. Creates new file or overwrites existing file |
+| ``a`` | **Append mode**. Adds data at the end of file |
+| ``x`` | **Create mode**. Creates new file, error if file exists |
 
 #### Text and Binary Modes
-Mode	Description
-t	Text mode (default)
-b	Binary mode (used for images, videos, etc)
 
-Example modes:
+| Mode | Description |
+|------|-------------|
+| ``t`` | **Text mode** (default) |
+| ``b`` | **Binary mode** (used for images, videos, etc) |
+
+**Example Modes :**
 ```python
 "rt" → read text  
 "rb" → read binary  
 "wt" → write text  
 ```
 
-
-
 ### Reading a File
-Reading a file means retrieving data stored in the file.
+Reading a file means **retrieving data stored in the file**.
 
 #### Read Entire File
 ```python
@@ -117,7 +113,7 @@ file.close()
 ```
 
 ### Reading Specific Characters
-The ``read(n)`` method allows reading only a specific number of characters.
+The ``read(n)`` method allows reading only a **specific number of characters**.
 
 #### Example
 ```python
@@ -125,9 +121,8 @@ with open("demofile.txt") as f:
     print(f.read(5))
 ```
 
-
 ### Reading Lines from a File
-Python provides methods to read a file line by line.
+Python provides methods to **read a file line by line**.
 
 #### Read One Line
 ```python
@@ -150,12 +145,11 @@ with open("demofile.txt") as f:
 ```
 
 
-
 ### Writing to a File
-Writing to a file means storing data inside the file.
+Writing to a file means **storing data inside the file**.
 
-#### Write Mode (w)
-Creates a new file or overwrites an existing file.
+#### Write Mode (``w``)
+Creates a **new file** or **overwrites an existing file**.
 
 #### Example
 ```python
@@ -164,10 +158,8 @@ with open("geek.txt", "w") as file:
     file.write("File handling is easy with Python.")
 ```
 
-
-
 ### Appending to a File
-Appending adds new data to the end of an existing file without deleting previous content.
+Appending adds **new data to the end of an existing file** without deleting previous content.
 
 #### Example
 ```python
@@ -177,7 +169,7 @@ with open("demofile.txt", "a") as f:
 
 
 ### Using the ``with`` Statement
-The with statement automatically closes the file after operations are completed, making the code safer and cleaner.
+The ``with`` **statement** automatically **closes the file after operations are completed**, making the code **safer** and **cleaner**.
 
 #### Example
 ```python
@@ -188,7 +180,7 @@ with open("geek.txt", "r") as file:
 
 
 ### Exception Handling with Files
-Exception handling ensures that files are properly closed even if an error occurs during file operations.
+**Exception handling** ensures that files are **properly closed even if an error occurs** during file operations.
 
 #### Example
 ```python
@@ -202,7 +194,7 @@ finally:
 
 
 ### Creating a File
-A new file can be created using mode x, w, or a.
+A new file can be created using mode ``x``, ``w``, or ``a``.
 
 #### Example
 ```python
@@ -210,9 +202,8 @@ file = open("Text.txt", "x")
 ```
 
 
-
 ### Deleting a File
-Files can be deleted using the os.remove() function.
+Files can be deleted using the ``os.remove()`` function.
 
 #### Example
 ```python
@@ -222,9 +213,7 @@ os.remove("demofile.txt")
 ```
 
 
-
 ### Checking if File Exists Before Deleting
-
 #### Example
 ```python
 import os
@@ -237,7 +226,7 @@ else:
 
 
 ### Deleting a Folder
-Python allows removing empty folders using os.rmdir().
+Python allows removing **empty folders** using ``os.rmdir()``.
 
 #### Example
 ```python
@@ -245,13 +234,10 @@ import os
 
 os.rmdir("myfolder")
 ```
-
-
-**Note :** Only empty folders can be removed.
+**Note :** Only **empty folders** can be removed.
 
 ### Conclusion
-
-File handling in Python allows programs to interact with external files for storing, reading, updating, and deleting data. Using proper file modes, exception handling, and the with statement ensures safe and efficient file operations.
+**File handling** in Python allows programs to interact with **external files** for **storing, reading, updating**, and **deleting** data. Using proper **file modes, exception handling**, and the ``with`` **statement** ensures **safe** and **efficient** file operations.
 
 
 ### Summary
