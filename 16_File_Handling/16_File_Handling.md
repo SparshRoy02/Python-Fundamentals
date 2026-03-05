@@ -153,7 +153,7 @@ Creates a **new file** or **overwrites an existing file**.
 
 #### Example
 ```python
-with open("geek.txt", "w") as file:
+with open("demo.txt", "w") as file:
     file.write("Hello, Python!\n")
     file.write("File handling is easy with Python.")
 ```
@@ -173,7 +173,7 @@ The ``with`` **statement** automatically **closes the file after operations are 
 
 #### Example
 ```python
-with open("geek.txt", "r") as file:
+with open("demo.txt", "r") as file:
     content = file.read()
     print(content)
 ```
@@ -185,7 +185,7 @@ with open("geek.txt", "r") as file:
 #### Example
 ```python
 try:
-    file = open("geek.txt", "r")
+    file = open("demo.txt", "r")
     content = file.read()
     print(content)
 finally:
